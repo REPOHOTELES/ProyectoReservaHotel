@@ -9,7 +9,7 @@ class User extends Person{
     private $role;
 
     /*
-     * Verifica si la combiancion usuario-cantraseña existe en la base de datos.
+     * Función para comprobar si las credenciales del usuario existen
      */
     public function exists($user, $password){
         $query = $this->connect()->prepare('SELECT id_persona FROM personas WHERE nombre_usuario = :username AND contrasena_usuario = :password');
