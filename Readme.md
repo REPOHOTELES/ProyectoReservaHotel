@@ -1,2 +1,2 @@
-#Hotel-app
-###Aplicación web para la gestión de reservas en hoteles.
+# Hotel-app
+### Aplicación web para la gestión de reservas en hoteles.
