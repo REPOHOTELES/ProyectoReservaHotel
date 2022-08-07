@@ -1,0 +1,15 @@
+{
+  "short_name": "Hotel",
+  "name": "Hotel",
+  "icons": [
+    {
+      "src": "./res/img/logoA.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "./inicio",
+  "display": "fullscreen",
+  "theme_color": "#2196F3",
+  "gcm_sender_id": "851427219936"
+}
