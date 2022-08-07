@@ -1,0 +1,26 @@
+
+/*Estilos Generales*/
+
+.button-i{
+    margin: 0;
+    padding: 0;
+    background: #18347D;
+    display: inline-block; 
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #373c3c;
+}
+
+.button-i p{
+    color: #fff;
+    font-size: 20px;
+}
+
+.button-i img{
+    width: 100px;
+    border: 0px;
+    border-style: none;
+}
