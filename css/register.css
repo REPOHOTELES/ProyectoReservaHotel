@@ -1,0 +1,188 @@
+body{
+    background: #f2f2f2;
+    font-family: "Roboto", sans-serif;
+}
+
+.top .up{
+    background: #18347D;
+    width: 100%;
+    padding: 10px;
+}
+
+.top .bott{
+    background: yellow;
+    width: 100%;
+    padding: 5px;
+}
+
+h2{
+    text-align: center;
+    color: #18347D;
+    margin-bottom: 30px;
+    font-family: "Roboto", sans-serif;
+}
+
+.wrap{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 40px;
+    padding-bottom: 55px;
+    margin: auto;
+    background: #fff;
+    background-image: url("/res/img/logop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 3px grey;
+}
+
+
+
+.contenedor-formulario{
+    width: 100%;
+    color: white;
+    padding: 40px;
+}
+
+.contenedor-formulario .formulario{
+    width: 100%;
+    margin: auto;
+}
+
+.contenedor-formulario .line-group{
+    float: left;
+    margin-left: 7%;
+    width: 100%;
+}
+
+.contenedor-formulario .formulario .input-group{
+    width: 45%;
+    padding-right: 5%;
+    float: left;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.contenedor-formulario .formulario .input-group input{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #303F9F;
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #BBDEFB;
+}
+
+.contenedor-formulario .formulario .input-group input:focus{
+    outline: none;
+    border-bottom: 2px solid #18347D;
+}
+
+.contenedor-formulario .formulario .input-group input .error{
+    border-bottom: 2px solid #D32F2F;
+}
+
+.contenedor-formulario .formulario .input-group label{
+    color: #18347D;
+}
+
+.contenedor-formulario .formulario .input-group label.label{
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 16px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.contenedor-formulario .formulario .input-group label.label_active{
+    top: -12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #B6B6B6;
+}
+
+.contenedor-formulario .formulario .input-group .combo{
+    background: #18347D;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 1px 5px rgba(0,0,0.5);
+}
+
+.contenedor-formulario .formulario .input-group .combo:hover{
+    cursor: pointer;
+}
+
+.contenedor-formulario .formulario .input-group label.label_combo{
+    position: relative;
+    left: 0px;
+    margin-right: 10px;
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+.contenedor-formulario .formulario .input-group.error label{
+    color: #D32F2F;
+}
+
+.contenedor-formulario .formulario .input-group.error label:hover{
+    background: rgba(#D32F2F, .2)
+}
+
+.contenedor-formulario .formulario input[type="submit"]{
+    background: #18347D;
+    border-radius: 1px;
+    border:  2px solid #f2f2f2;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.contenedor-formulario .formulario input[type="submit"]:hover{
+    background: #485D93;
+}
+
+.contenedor-formulario .formulario .input-group label .label_radio{
+    position: relative;
+    left: 0px;
+    margin-right: 10px;
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+.contenedor-formulario .formulario .input-group input[type="radio"]{
+    width: 10px;
+}
+
+
+.contenedor-formulario .formulario .input-group .radio-text{
+    color: black;
+}
+
+
+.formulario a{
+    text-decoration: none;
+    position: relative;
+    padding-top: 10px;
+    color: #18347D;
+    font-size: 14px;
+    text-align: right;
+    float: right; 
+}
