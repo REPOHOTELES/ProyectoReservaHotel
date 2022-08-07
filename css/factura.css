@@ -1,0 +1,107 @@
+h1{
+    color: #18347D;
+}
+
+.series{
+    text-align: center;
+    width: 15%;
+    float: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #18347D;
+    border-radius: 10px;
+    margin-right: 5%;
+}
+
+.series select{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+.series p{
+    font-size: 100%;
+    color: red;
+}
+
+.series .types {
+    font-size: 100%;
+    color: #18347D;
+}
+
+.infos{
+    margin-top: 25px;
+}
+
+.infos p{
+    font-size: 15px;
+    padding: 7px;
+    margin-left: 5%;
+}
+
+.tables{
+    width: 90%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+table {
+  font-family: "arial", sans-serif;
+  border-collapse: collapse;
+}
+
+td{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  color: #fff;
+  padding: 8px;
+    background-color: #18347D;
+}
+
+.table_totals{
+    width: 100%;
+    margin-right: auto;
+}
+
+.long_totals{
+    width: 50%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.option_bill {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.option_bill form input{
+    padding: 10px;
+    background-color: #18347D;
+    border: none;   
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.option_bill a{
+    float: right;
+    padding: 10px;
+    background-color: #18347D;
+    border: none;   
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+}
