@@ -1,0 +1,88 @@
+header{
+    float: left;
+    background: yellow;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 160px;
+}
+
+#logo-hotel{
+    float: left;
+	height: 60px;
+    margin-right: 10px;
+    margin-left:10px;
+    margin-top: 10px;
+}
+
+#current-item{
+    background: #18347D;
+    color: white;
+
+}
+.menu-item{
+    float: left;
+}
+
+.main-menu-item {
+    padding: 5px;
+    border-radius: 3px;
+    border-style: none;
+    background: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-menu-item p{
+    float: left;
+    display: none;
+}
+
+.main-menu-item img{
+    float: left;
+	width: 50px;
+	height: 50px;
+}
+
+.main-menu-item:hover{
+    background: #DFDF04;
+    cursor: pointer;
+}
+
+#menu-button{
+    display: initial;
+}
+
+.app-area{
+    display: none;
+    max-width: 80%;
+}
+
+.user-area{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Diseño de estilos en 840*/
+@media only screen and (min-width: 840px){
+    .main-menu-item p{
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    .app-area{
+        display: initial;
+        max-width: 90%;
+    }
+
+    #menu-button{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    header{
+        max-height: 80px;
+    }
+}
