@@ -65,7 +65,7 @@ function send(entity, extra){
 function sendUpdate(data){
 	var p= $.ajax({
 		type: 'post',
-		url: '/includes/update.php',
+		url: '../includes/update.php',
 		data: data
 	});
 
@@ -188,9 +188,9 @@ function sendReservation(user){
 
 					if(document.getElementById("checkon-check").checked)
 						if(document.getElementById("payment-check").checked)
- 							href='/facturas/registrar?id='+bookingId;
+ 							href='../facturas/registrar?id='+bookingId;
  						else
- 							href='/control_diario?date='+getDate(0);
+ 							href='../control_diario?date='+getDate(0);
  					else
 						href='/reservas';
 					
@@ -258,11 +258,11 @@ function updateReservation(user,idBooking){
 					
 					if(document.getElementById("checkon-check").checked)
 						if(document.getElementById("payment-check").checked)
- 							href='/facturas/registrar';
+ 							href='../facturas/registrar';
  						else
- 							href='/control_diario?date='+getDate(0);
+ 							href='../control_diario?date='+getDate(0);
  					else
-						href='/reservas';
+						href='../reservas';
 					
  					location.href=href;
 
@@ -456,7 +456,7 @@ function sendProfession(){
 
 	$.ajax({
 		type: 'post',
-		url: '/includes/insert.php',
+		url: '../includes/insert.php',
 		data: "entity=profession&name="+card.getElementsByTagName("input")[0].value,
 		success: function (ans) {
 			var data=ans.split(";");
@@ -472,7 +472,7 @@ function sendEnterprise(){
 	var card=document.getElementsByClassName("card-enterprise")[0];
 	$.ajax({
 		type: 'post',
-		url: '/includes/insert.php',
+		url: '../includes/insert.php',
 		data: "entity=enterprise&nit="+card.getElementsByTagName("input")[0].value
 		+"&name="+card.getElementsByTagName("input")[1].value+"&phone="+$(card.getElementsByTagName("input")[2]).cleanVal()
 		+"&email="+(card.getElementsByTagName("input")[3].value==""?"NULL":card.getElementsByTagName("input")[3].value)
@@ -481,7 +481,7 @@ function sendEnterprise(){
 			var data=ans.split(";");
 			showAlert(data[0],data[1]);
 			setTimeout(function(){
-				location.href="/empresas";
+				location.href="../empresas";
 			},1500);
 		},
 		error: function (ans) {
@@ -497,9 +497,9 @@ function sendEnterprise(){
  		showAlert(data[0],data[1]);
 
  		if(document.getElementById("payment-check").checked)
- 			href='/facturas/registrar?id='+reservation;
+ 			href='../facturas/registrar?id='+reservation;
  		else
- 			href='/control_diario?date='+getDate(0);
+ 			href='../control_diario?date='+getDate(0);
 
  		location.href=href;
  	});
@@ -518,7 +518,7 @@ function confirmCheckUp(reservation, room){
  		var data=ans.split(";");
  		showAlert(data[0],data[1]);
 
- 		href='/control_diario?date='+getDate(0);
+ 		href='../control_diario?date='+getDate(0);
 
  		location.href=href;
  	});
