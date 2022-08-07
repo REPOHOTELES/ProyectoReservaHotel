@@ -241,9 +241,6 @@
 
             $query->execute([':quantity'=>$quantity]);
             
-            foreach ($query as $current) {
-                //echo '<option value="'.$current['id_tipo_habitacion'].'">'.$current['nombre_tipo_habitacion'].'</option>';
-            }
 
             echo '<option value="1">JOLIOT</option>';
             echo '<option value="2">HAWKING</option>';
@@ -323,9 +320,9 @@
             foreach ($query as $current){
                 echo '<tr>'.PHP_EOL;
                 echo '<td>'.$current['id_reserva'].'</td>'.PHP_EOL;
-                echo '<td><button onclick="window.location.href='."'/reservas/editar?id=".$current['id_reserva']."'".'" class="btn btn-table btn-edit-hover '.($current['aux']==1?"btn-success":"btn-complete").'"><span>'.($current['aux']==1?"Listo":"Completar").'</span></button></td>'.PHP_EOL;
+                echo '<td><button onclick="window.location.href='."'../reservas/editar?id=".$current['id_reserva']."'".'" class="btn btn-table btn-edit-hover '.($current['aux']==1?"btn-success":"btn-complete").'"><span>'.($current['aux']==1?"Listo":"Completar").'</span></button></td>'.PHP_EOL;
                 echo '<td><label class="switch switch-table"><input type="checkbox" onchange="setCheckOn('.$current['id_reserva'].',this);"'.($current['fecha_ingreso']==date("Y-m-d")&&$current['aux']==1?'':'disabled').'><span class="slider '.($current['fecha_ingreso']==date("Y-m-d")&&$current['aux']==1?'slider-red':'slider-gray').' round green"></span></label></td>';
-                echo '<td><a href="'.($current['id_titular']==""?'/empresas/detalles?id='.$current['id_empresa']:'/clientes/detalles?id='.$current['id_titular']).'">'.($current['id_titular']==""?$current['nombre_empresa']:$current['nombre_t']).'</a></td>';
+                echo '<td><a href="'.($current['id_titular']==""?'../empresas/detalles?id='.$current['id_empresa']:'/clientes/detalles?id='.$current['id_titular']).'">'.($current['id_titular']==""?$current['nombre_empresa']:$current['nombre_t']).'</a></td>';
                 echo '<td>'.($current['id_titular']==""?$current['telefono_empresa']:$current['telefono_persona']).'</td>'.PHP_EOL;
                 echo '<td>'.($current['fecha_ingreso']>=date("Y-m-d")?$current['fecha_ingreso']:"Vencido").'</td>'.PHP_EOL;
                 echo '<td>'.$current['dias'].'</td>'.PHP_EOL;
@@ -335,7 +332,7 @@
                 $ids=explode(",",$current['ids_c']);
                 
                 for ($i=0;$i<count($names);$i++) {
-                    echo '<a href=/clientes/detalles?id='.$ids[$i].'>'.$names[$i].'</a>';
+                    echo '<a href=../clientes/detalles?id='.$ids[$i].'>'.$names[$i].'</a>';
                     if(count($names)-1!=$i)
                         echo ',';
                 }
@@ -385,7 +382,7 @@
             foreach ($query as $current){
                 echo '<tr>'.PHP_EOL;
                 echo '<td class="num">'.$current['numero_documento'].'</td>'.PHP_EOL;
-                echo '<td style = "text-align: left; padding: 10px;"><a href="/clientes/detalles?id='.$current['id_persona'].'">'.$current['nombre'].'</a></td>'.PHP_EOL;
+                echo '<td style = "text-align: left; padding: 10px;"><a href="../clientes/detalles?id='.$current['id_persona'].'">'.$current['nombre'].'</a></td>'.PHP_EOL;
                 echo '<td>'.$current['telefono_persona'].'</td>'.PHP_EOL;
                 echo '</tr>'.PHP_EOL;
             }
@@ -403,7 +400,7 @@
 
             foreach ($query as $current){
                 echo '<tr>'.PHP_EOL;
-                echo '<td style = "text-align: left; padding: 10px;"><a href="/usuarios/detalles?id='.$current['id_persona'].'">'.$current['nombre'].'</a></td>'.PHP_EOL;
+                echo '<td style = "text-align: left; padding: 10px;"><a href="../usuarios/detalles?id='.$current['id_persona'].'">'.$current['nombre'].'</a></td>'.PHP_EOL;
                 echo '<td class="num">'.$current['telefono_persona'].'</td>'.PHP_EOL;
                 echo '<td>'.$current['correo_persona'].'</td>'.PHP_EOL;
                 echo '<td>'.$current['nombre_cargo'].'</td>'.PHP_EOL;
@@ -422,7 +419,7 @@
             foreach ($query as $current){
                 echo '<tr>'.PHP_EOL;
                 echo '<td>'.$current['nit_empresa'].'</td>'.PHP_EOL;
-                echo '<td style = "text-align: left; padding: 10px;"><a href="/empresas/detalles?id='.$current['id_empresa'].'">'.$current['nombre_empresa'].'</a></td>'.PHP_EOL;
+                echo '<td style = "text-align: left; padding: 10px;"><a href="../empresas/detalles?id='.$current['id_empresa'].'">'.$current['nombre_empresa'].'</a></td>'.PHP_EOL;
                 echo '<td>'.$current['telefono_empresa'].'</td>'.PHP_EOL;
                 echo '<td>'.($current['retefuente']==1?'Si':'No').'</td>'.PHP_EOL;
                 echo '<td>'.($current['ica']==1?'Si':'No').'</td>'.PHP_EOL;
@@ -450,8 +447,8 @@
                 echo '<td>'.'$ '.number_format($current['total_factura'], 0, '.', '.').'</td>'.PHP_EOL;
                 echo '<td>'.$current['fecha_factura'].'</td>'.PHP_EOL;
                 echo '<td>'.$current['responsable'].'</td>'.PHP_EOL;
-                echo '<td><a href = "/facturas/registrar?id='.$current['id_reserva'].'&serie='.$current['serie_factura'].'"class="button-more-info" class="col-10">Ver Detalles</a></td>';
-                echo '<td><a target = "_blank" href = "/reportes/facturas?id='.$current['id_reserva'].'&typeBill='.$current['tipo'].'&serie='.$current['serie_factura'].'" class="col-10"><img src="/res/img/pdf-icon.png" style="cursor:pointer;" width="60"/></a></td>';
+                echo '<td><a href = "../facturas/registrar?id='.$current['id_reserva'].'&serie='.$current['serie_factura'].'"class="button-more-info" class="col-10">Ver Detalles</a></td>';
+                echo '<td><a target = "_blank" href = "../reportes/facturas?id='.$current['id_reserva'].'&typeBill='.$current['tipo'].'&serie='.$current['serie_factura'].'" class="col-10"><img src="/res/img/pdf-icon.png" style="cursor:pointer;" width="60"/></a></td>';
                 echo '</tr>'.PHP_EOL;
             }
         }
@@ -494,7 +491,7 @@
 
                     if($current['id_reserva']==$aux[0]){
                         if(count($aux)==2)
-                            echo '<a href=/clientes/detalles?id='.$ids[$i].'>'.$aux[1].'</a> ';
+                            echo '<a href=../clientes/detalles?id='.$ids[$i].'>'.$aux[1].'</a> ';
                     }
                 }
 
@@ -825,7 +822,7 @@
             $query->execute([':id'=>$id,':res'=>$res]);
 
             foreach ($query as $current) {
-                echo '<tr><td><a href=/clientes/detalles?id='.$current['id_persona'].'>'.$current['nombre'].'</a></td>';
+                echo '<tr><td><a href=../clientes/detalles?id='.$current['id_persona'].'>'.$current['nombre'].'</a></td>';
                 echo '<td>'.$current['numero_documento'].'</td>';
                 echo '<td>'.$current['telefono_persona'].'</td>';
                 echo '<td class="switch-input"><label class="switch switch-table"><input type="checkbox"><span class="slider slider-gray round green"></span></label></td></tr>';
