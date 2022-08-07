@@ -32,7 +32,7 @@
 <html>
     <!--Importación de librerias css y javascript -->
     <head>
-        <title>Reportes | Hotel Aristo</title>
+        <title>Reportes | Hotel</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="../res/img/famicon.png" />
