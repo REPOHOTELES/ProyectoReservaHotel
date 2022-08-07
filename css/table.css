@@ -1,0 +1,90 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+  border: 1px solid #dddddd;
+  text-align: center;
+  font-size: 15px;
+    font-family: sans-serif;
+  padding: 0px 5px;
+
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+thead{
+    background-color: #18347D;
+    border-bottom: solid 5px #1b2a40;
+    color: white;
+}
+
+.vertical-word{
+    writing-mode: vertical-lr;
+    transform:rotate(180deg);
+    margin-left: 10px;
+}
+
+.button-check-in{
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    color: white;
+}
+
+.checked-in {
+    background: green;
+}
+
+.without-check-in{
+    background: red;
+}
+
+.checked-in:hover{
+    background: darkgreen;
+    cursor: pointer;
+}
+
+.without-check-in:hover{
+    background: darkred;
+    cursor: pointer;
+}
+
+.button-more-info{
+    background: #18347D;
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 2px 0px #1b2a40;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.button-more-info:visited{
+    color: #fff;
+}
+
+.button-more-info:hover{
+    box-shadow: 0px 0px 0px;
+    background: #0E1F4A;
+}
+
+.btn-new-bill{
+    padding: 30px;
+    float: right;
+}
