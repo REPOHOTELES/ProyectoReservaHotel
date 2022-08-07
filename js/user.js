@@ -15,30 +15,6 @@ function defineUpdate(idRol, idUserInput){
     idUser = idUserInput;
     var mySelectRole = document.getElementsByTagName("select")[1];
     mySelectRole.selectedIndex = idRol-1;
-    /*var typeDoc;
-    
-    switch(typeDocument){
-        case "CC":
-            typeDoc = 0;
-            break;
-        case "RC":
-            typeDoc = 1;
-            break;
-        case "TI":
-            typeDoc = 2;
-            break;
-        case "CE":
-            typeDoc = 3;
-            break;
-        case "PS":
-            typeDoc = 4;
-            break;
-        default:
-            typeDoc = 0;
-    }
-    
-    var mySelectDoc = document.getElementsByTagName("select")[0];
-    mySelectDoc.selectedIndex = typeDoc;*/
 }
 
 function saveUser(){
