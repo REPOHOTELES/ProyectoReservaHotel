@@ -1,0 +1,142 @@
+*{    
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+.title {
+    float: left;
+    width: 23%;
+}
+
+.title img{
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+
+.title_img{
+    position: absolute;
+    width: 22%;
+    margin-left: 14%;
+    margin-top: 5%;
+} 
+
+.title_img img{
+    width: 100%;
+}
+
+.info_hotel{
+    position: absolute;
+    text-align: center;
+    margin-left: 45%;
+    margin-top: 5%;
+}
+
+.info_hotel p{
+    color: #223756;
+    font-size: 13px;
+}
+
+.header-right{
+    width: 30%;
+    top: 5%;
+    right: 2%;
+    text-align: right;
+    position: absolute;
+}
+
+.header-right p{
+    color: #223756;
+    font-size: 13px;
+}
+
+.serie{
+    top: 25%;
+    right: 2%;
+    text-align: center;
+    width: 30%;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #223756;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.serie p{
+    font-size: 20px;
+    color: red;
+}
+
+.serie .type {
+    font-size: 17px;
+    color: #223756;
+    padding-bottom: 5px;
+}
+
+.info{
+    margin-top: 25px;
+}
+
+.info p{
+    font-size: 15px;
+    padding: 7px;
+}
+
+.table{
+    margin-top: 50px;
+    margin-left: 13%;
+}
+
+table {
+    table-layout: fixed;
+  font-family: "arial", sans-serif;
+  border-collapse: collapse;
+  width: 500px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.long_col{
+    width: 250px;
+    text-align: center;
+}
+
+.long_total {
+    width: 369px;
+}
+
+.long_total p{
+    color: #fff;
+}
+
+.table_total{
+    margin-left: 13%;
+}
+
+.table_total .long_letter{
+    height: 110px;
+}
+
+.long_value {
+    width: 56px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.legal {
+    text-align: center;
+    font-size: 12px;
+}
+
+.rol{
+    margin-top: 20px;
+    margin-left: 13%;
+}
