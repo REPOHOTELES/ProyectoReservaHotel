@@ -44,7 +44,7 @@ function updateCustomer(){
     
     $.ajax({
         type: 'post',
-        url: '/includes/update.php',
+        url: '../includes/update.php',
         data: "action=updateCustomer&name="+name+"&lastName="+lastName+"&numberDoc="+numberDoc+"&phone="+phone+"&email="+email+"&birthDate="+birthDate+"&typeDocument="+typeDocument+"&countryExp="+countryExp+"&cityExp="+cityExp+"&gender="+gender+"&typeBlood="+typeBlood+"&profession="+profession+"&nationality="+nationality+"&id="+idCustomer,
         success: function (ans) {
             var data=ans.split(";");
@@ -64,5 +64,5 @@ function deleteCustomer(){
 }
 
 function redirect(){
-    window.location = "/clientes/";
+    window.location = "../clientes/";
 }
