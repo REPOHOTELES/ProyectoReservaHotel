@@ -1,0 +1,303 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+form{
+    margin-block-end: 0;
+}
+
+.row.hideable{
+  display: none;
+}
+
+.hideable{
+  display: none;
+}
+
+.btn {
+    border-radius: 3px;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-edit-hover:hover{
+    background: blue;
+}
+
+.btn-edit-hover:hover span{
+    display: none;
+}
+
+.btn-edit-hover {
+    min-width: 120px;
+}
+
+.btn-edit-hover:hover:before {
+    content: 'Editar';
+}
+
+.btn, .button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    border-radius: 3;
+    cursor: pointer;
+}
+
+.btn-circle:hover{
+    opacity: 0.8;
+}
+
+.btn-register {
+    color: #fff;
+    background-color:#18347D;
+    border-color:#17a2b8;
+}
+
+.btn-check-in,.btn-done{
+    color: #fff;
+    background-color: #18347D;
+    border-color:#18347D;
+    padding: 2px 5px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-circle{
+    border-radius: 20px;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 1px 12px;
+    background-color: green;
+}
+
+.btn-table{
+  width: 100%;
+  border-radius: 3;
+  border: 1px solid transparent;
+  padding: 1px 12px;
+}
+
+.btn-success{
+  color: #fff;
+  background-color: green;
+}
+
+.btn-complete{
+  color: #fff;
+  background-color: red;
+}
+
+.btn, button, input, textarea {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0 !important;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    margin-bottom: 0px;
+}
+
+small {
+    font-size: 80%;
+}
+
+small {
+    font-size: 80%;
+}
+
+b, strong {
+    font-weight: bolder;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row-simple{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.in-row{
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+.card {
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin-bottom: 1.875em;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    opacity: 0.9;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: 
+    rgba(0,0,0,.03);
+    border-bottom: 1px solid
+    rgba(0,0,0,.125);
+}
+
+.card-header .btn-right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card .card-body, .card .card-search {
+    float: left;
+    padding: 1.25em;
+    position: relative;
+    width: 100%;
+}
+
+.card-center-content{
+    width: 70%;
+    padding-top: 20px;
+    padding-left: 30%;
+}
+
+
+.card-body, .card-preview {
+    padding: 15px;
+}
+.card-body, .card-preview {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-preview{
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group-icon {
+    padding: .5rem .75rem;
+    border: 1px solid
+    rgba(0, 0, 0, 0.15);
+    border-radius: .25rem;
+}
+
+.input-group-icon,
+.input-group-btn {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.input-group > .custom-select:not(:first-child), 
+.input-group > .form-control:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group > .custom-file, 
+.input-group > .custom-select, 
+.input-group > .form-control {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color:#fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control::placeholder {
+    color: 
+    #6c757d;
+    opacity: 1;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+.text-muted {
+    color: 
+    #6c757d !important;
+}
+.form-text {
+    display: block;
+    margin-top: .25rem;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
