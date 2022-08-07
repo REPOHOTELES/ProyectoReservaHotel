@@ -1,0 +1,199 @@
+
+h1{
+    color: #18347D;
+    text-align: center;
+}
+
+.border{
+    width: 100%;
+    
+}
+
+.border .borderUp{
+    padding: 10px;
+    background: rgb(253, 253, 255);
+}
+
+.border .borderDown{
+    padding: 10px;
+    background: rgb(255, 255, 255);
+}
+
+.marco{
+    float: left;
+    background: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 3px grey;
+    overflow: auto;
+    background-image:url(../res/img/logop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nearly-page{
+    width: 90%;
+    margin-left: 4%;
+    padding: 1%;
+}
+
+#titleBill{
+    padding: 5%;
+    font-size: 18px;
+}
+
+.series{
+    text-align: center;
+    width: 13%;
+    float: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #18347D;
+    border-radius: 10px;
+    margin-right: 3%;
+    padding: 5px; 
+}
+
+.series select{
+    margin: 5px;
+    color: red;
+    font-size: 100%;
+}
+
+.series select option{
+    color: red;
+}
+
+.code_bill{
+    color: red;
+    width: 60px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.series p{
+    font-size: 100%;
+    color: red;
+}
+
+.series .types {
+    font-size: 90%;
+    color: #18347D;
+    padding-bottom: 5px;
+}
+
+.infos{
+    margin-top: 25px;
+}
+
+.infos p{
+    font-size: 15px;
+    padding: 7px;
+    margin-left: 5%;
+}
+
+.tables{
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 10PX;
+}
+
+table {
+    width: 90%;
+  font-family: "arial", sans-serif;
+  border-collapse: collapse;
+    opacity: 0.83;
+}
+
+td{
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  color: #fff;
+  padding: 8px;
+  background-color: #18347D;
+   
+}
+
+.table_totals{
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.option_bill {
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.lista-habitaciones{
+    background: #18347D;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0.5);
+}
+
+.lista-habitaciones:hover{
+    cursor: pointer;
+}
+
+.option_bill input{
+    padding: 10px;
+    background-color: #18347D;
+    border: none;   
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.option_bill a{
+    float: right;
+    padding: 10px;
+    background-color: #18347D;
+    border: none;   
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.option_bill form{
+    float: left;
+}
+
+.desc {
+   width: 100%;
+   font-size: 15px;
+}
+
+.data {
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.resp {
+    width: 300px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.vTotal{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
