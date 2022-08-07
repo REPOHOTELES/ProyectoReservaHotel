@@ -32,14 +32,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/res/img/famicon.png" />
-        <link rel="manifest" href="/manifest.json">
-        <link rel="stylesheet" type="text/css" href="/css/main.css">
-        <link rel="stylesheet" type="text/css" href="/css/form.css">
-        <link rel="stylesheet" type="text/css" href="/css/inicio.css">
-        <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
-        <script type="text/javascript" src="/js/moment.js"></script>
-        <script type="text/javascript" src="/js/dynamic.js"></script>
-        <script type="text/javascript" src="/js/jquery.js"></script>
+        <link rel="manifest" href="../manifest.json">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/form.css">
+        <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+        <script type="text/javascript" src="../js/moment.js"></script>
+        <script type="text/javascript" src="../js/dynamic.js"></script>
+        <script type="text/javascript" src="../js/jquery.js"></script>
     </head>
     <body>
         
@@ -64,34 +64,34 @@
                     <p><strong>HOTEL</strong></p>
                 </div>
                 <?php if($user->getRole()!=4):?>
-                    <a href="/reservas/" class="button">
+                    <a href="../reservas/" class="button">
                         <p>Reservas</p>
                         <img src="../res/img/book-icon-white.png">
                     </a>
                 <?php endif;?>
-                    <a onclick="window.location.href = '/control_diario?date='+getDate(0);" class="button">
+                    <a onclick="window.location.href = '../control_diario?date='+getDate(0);" class="button">
                         <p>Control diario</p>
-                        <img src="/res/img/control-icon-white.png">
+                        <img src="../res/img/control-icon-white.png">
                     </a>
                    
                     <?php if($user->getRole()==5||$user->getRole()==1):?>
                     <a href="/usuarios/" class="button">
                         <p>Usuarios</p>
-                        <img src="/res/img/use-whiter.png">
+                        <img src="../res/img/use-whiter.png">
                     </a>
                      <?php endif;
                      if($user->getRole()!=4):?>
-                    <a href="/empresas/" class="button">
+                    <a href="../empresas/" class="button">
                         <p>Empresas</p>
-                        <img src="/res/img/company-white.png">
+                        <img src="../res/img/company-white.png">
                     </a>
-                    <a href="/facturas/" class="button">
+                    <a href="../facturas/" class="button">
                         <p>Facturación</p>
-                        <img src="/res/img/bill-icon-white.png">
+                        <img src="../res/img/bill-icon-white.png">
                     </a>
                     <a href="/reportes/" class="button">
                         <p>Reportes</p>
-                        <img src="/res/img/report-white.png">
+                        <img src="../res/img/report-white.png">
                     </a>
                 <?php endif;?>
             </div>
