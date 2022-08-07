@@ -229,7 +229,7 @@ function updateRoomTariff(index){
 	
 	 $.ajax({
 		type: 'post',
-		url: '/includes/get.php',
+		url: '../includes/get.php',
 		data: 'entity=roomTariff&roomQuantity='+selects[0].value+'&roomType='+selects[1].value,
 		success: function (ans) {
 			selects[3].innerHTML=ans;
@@ -240,7 +240,7 @@ function updateRoomTariff(index){
 function updateCities(obj){
 	$.ajax({
 		type:'post',
-		url:'/includes/get.php',
+		url:'../includes/get.php',
 		data:'entity=country&country='+obj.value,
 		success:function(ans){
 			obj.parentElement.parentElement.parentElement.getElementsByTagName("select")[1].innerHTML=ans;
@@ -256,7 +256,7 @@ function updateProfession(){
 	window.setTimeout(function(){
 		$.ajax({
 			type: 'post',
-			url: '/includes/get.php',
+			url: '../includes/get.php',
 			data: 'entity=profession',
 			success: function (ans) {
 				for (var i = 0; i < cards.length; i++) {
@@ -275,7 +275,7 @@ function updateEnterprise(){
 	window.setTimeout(function(){
 		$.ajax({
 			type: 'post',
-			url: '/includes/get.php',
+			url: '../includes/get.php',
 			data: 'entity=enterprise',
 			success: function (ans) {
 				for (var i = 0; i < cards.length; i++) {
@@ -324,7 +324,7 @@ function updateEnterprise(){
  			}});
  		$.ajax({
  			type:'post',
- 			url:'/includes/get.php',
+ 			url:'../includes/get.php',
  			data:'entity=getBookingClients&idBooking='+reservation+'&idRoom='+room
  		}).then(function(ans){
  			var header=table.firstElementChild;
@@ -376,7 +376,7 @@ function updateEnterprise(){
 
  		$.ajax({
  			type:'post',
- 			url:'/includes/get.php',
+ 			url:'../includes/get.php',
  			data:'entity=getBookingAmount&idBooking='+reservation
  		}).then(function(ans){
  			document.getElementById("checkout-message").innerHTML=
@@ -385,9 +385,9 @@ function updateEnterprise(){
  			var href;
 
  			if(ans=="1")
-				href='/control_diario?date='+getDate(0);
+				href='../control_diario?date='+getDate(0);
  			else
- 				href='/facturas/registrar?id='+reservation+'&co=1';
+ 				href='../facturas/registrar?id='+reservation+'&co=1';
  			modal.getElementsByTagName("button")[0].onclick=function(){location.href=href; if(ans=="1")confirmCheckOut(reservation); };
  		});
 
