@@ -20,7 +20,7 @@
     if(isset($_SESSION['user'])){
         $user->updateDBUser($userSession->getSession());
     }else{
-        header('location: /login');
+        header('location: ../login');
     }
 ?>
 
@@ -28,7 +28,7 @@
 <html>
 
     <head>
-        <title>Inicio | Hotel Aristo</title>
+        <title>Inicio | Hotel</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/res/img/famicon.png" />
@@ -61,7 +61,7 @@
         <div class="content col-12">
             <div class="wrap-main col-8 wrap-8 wrap-menu">
                 <div class="title">
-                    <p><strong>HOTEL ARISTO</strong></p>
+                    <p><strong>HOTEL</strong></p>
                 </div>
                 <?php if($user->getRole()!=4):?>
                     <a href="/reservas/" class="button">
