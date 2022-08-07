@@ -50,7 +50,7 @@
             foreach ($result as $current) {
                 $output.='<tr>
                             <td>'.$current['nit_empresa'].'</td>
-                            <td style = "text-align: left; padding: 10px;"><a href="/empresas/detalles?id='.$current['id_empresa'].'">'.$current['nombre_empresa'].'</a></td>
+                            <td style = "text-align: left; padding: 10px;"><a href="../empresas/detalles?id='.$current['id_empresa'].'">'.$current['nombre_empresa'].'</a></td>
                             <td>'.$current['telefono_empresa'].'</td>
                             <td>'.$current['retefuente'].'</td>
                             <td>'.$current['ica'].'</td>
@@ -94,7 +94,7 @@
 
             foreach ($result as $current) {
                 $output.='<tr>
-                            <td style = "text-align: left; padding: 10px;"><a href="/usuarios/detalles?id='.$current['id_persona'].'">'.$current['nombres'].'</a></td>
+                            <td style = "text-align: left; padding: 10px;"><a href="../usuarios/detalles?id='.$current['id_persona'].'">'.$current['nombres'].'</a></td>
                             <td>'.$current['telefono_persona'].'</td>
                             <td>'.$current['correo_persona'].'</td>
                             <td>'.$current['nombre_cargo'].'</td>
@@ -137,7 +137,7 @@
             foreach ($result as $current) {
                 $output.='<tr>
                             <td>'.$current['numero_documento'].'</td>
-                            <td style = "text-align: left; padding: 10px;"><a href="/clientes/detalles?id='.$current['id_persona'].'">'.$current['nombres'].'</a></td>
+                            <td style = "text-align: left; padding: 10px;"><a href="../clientes/detalles?id='.$current['id_persona'].'">'.$current['nombres'].'</a></td>
                             <td>'.$current['telefono_persona'].'</td>
                         </tr>';
             }
@@ -192,7 +192,7 @@
                             <td>'.$current['fecha_factura'].'</td>
                             <td>'.$current['responsable'].'</td>
                             <td><a href = "/facturas/registrar?id='.$current['id_reserva'].'&serie='.$current['serie_factura'].'"class="button-more-info" class="col-10">Ver Detalles</a></td>
-                            <td><a target = "_blank" href = "/reportes/facturas?id='.$current['id_reserva'].'&typeBill='.$current['tipo'].'&serie='.$current['serie_factura'].'" class="col-10"><img src="/res/img/pdf-icon.png" style="cursor:pointer;" width="60"/></a></td>
+                            <td><a target = "_blank" href = "../reportes/facturas?id='.$current['id_reserva'].'&typeBill='.$current['tipo'].'&serie='.$current['serie_factura'].'" class="col-10"><img src="/res/img/pdf-icon.png" style="cursor:pointer;" width="60"/></a></td>
                         </tr>';
             }
             $output.="</tbody></table>";
