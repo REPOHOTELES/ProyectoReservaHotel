@@ -3,7 +3,7 @@
     * Archivo que contiene la información pertinente a la edición de los clientes almacenados en la base de datos
     * @package   clientes.editar
     * @author    Grupo 3 SW2
-    * @copyright Todos los derechos reservados. 2020.
+    * @copyright Todos los derechos reservados. 2022.
     * @since     Versión 1.0
     * @version   1.0
     */
