@@ -31,7 +31,7 @@
         <title>Inicio | Hotel</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/res/img/famicon.png" />
+        <link rel="shortcut icon" href="../res/img/famicon.png" />
         <link rel="manifest" href="../manifest.json">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet" type="text/css" href="../css/form.css">
@@ -75,7 +75,7 @@
                     </a>
                    
                     <?php if($user->getRole()==5||$user->getRole()==1):?>
-                    <a href="/usuarios/" class="button">
+                    <a href="../usuarios/" class="button">
                         <p>Usuarios</p>
                         <img src="../res/img/use-whiter.png">
                     </a>
@@ -89,7 +89,7 @@
                         <p>Facturación</p>
                         <img src="../res/img/bill-icon-white.png">
                     </a>
-                    <a href="/reportes/" class="button">
+                    <a href="../reportes/" class="button">
                         <p>Reportes</p>
                         <img src="../res/img/report-white.png">
                     </a>
