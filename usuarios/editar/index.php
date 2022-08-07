@@ -1,7 +1,7 @@
 <?php
     /**
     * Archivo que contiene el formulario correspondiente para el registro de un nuevo cliente
-    * @package   usuarios.registrar
+    * @package   usuarios.editar
     * @author    Grupo 3 SW2
     * @copyright Todos los derechos reservados. 2022.
     * @since     Versión 1.0
@@ -34,7 +34,7 @@
     <!--Importación de librerias css y javascript -->
 	<head>
 		<link rel="shortcut icon" href="../../res/img/famicon.png" />
-		<title>Editar Usuario | Hotel Aristo</title>
+		<title>Editar Usuario | Hotel</title>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -62,9 +62,9 @@
         
         <script type="text/javascript">
             /**
-            * Implementa el método setCurrentPage() pasando como parámetro la cadena de texto "registrar"
+            * Implementa el método setCurrentPage() pasando como parámetro la cadena de texto "editar"
             */
-            setCurrentPage("registrar");
+            setCurrentPage("editar");
         </script>
         <!-- Bloque que contiene el formulario con los campos correspondientes para el proceso de registro de un cliente-->
 		 <div class="content col-12 padd">
