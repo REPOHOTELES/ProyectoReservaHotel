@@ -64,14 +64,14 @@
         <title>Login | Hotel</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/res/img/famicon.png" />
-        <link rel="manifest" href="/manifest.json">
+        <link rel="shortcut icon" href="../res/img/famicon.png" />
+        <link rel="manifest" href="../manifest.json">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/css/login.css">
-        <link rel="stylesheet" type="text/css" href="/css/main.css">
-        <link rel="stylesheet" type="text/css" href="/css/alerts.css">
-        <script type="text/javascript" src="/js/moment.js"></script>
-        <script type="text/javascript" src="/js/dynamic.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/alerts.css">
+        <script type="text/javascript" src="../js/moment.js"></script>
+        <script type="text/javascript" src="../js/dynamic.js"></script>
     </head>
     
     <!--Construcción de la vista-->
