@@ -316,7 +316,7 @@
                 r.id_titular, CONCAT_WS(" ",t.nombres_persona,t.apellidos_persona) nombre_t,t.telefono_persona, 
                 r.id_empresa, e.nombre_empresa, e.telefono_empresa,
                 rc.id_huesped, GROUP_CONCAT(CONCAT_WS(" ",c.nombres_persona,c.apellidos_persona)) nombres_c,GROUP_CONCAT(c.id_persona) ids_c,
-                (COUNT(rc.id_registro_huesped)=SUM(NVL2(c.tipo_sangre_rh,1,0))) aux
+                (COUNT(rc.id_registro_huesped)=SUM(COALESCE(c.tipo_sangre_rh,1,0))) aux
                 FROM reservas r 
                 LEFT JOIN personas t ON r.id_titular=t.id_persona 
                 LEFT JOIN empresas e ON r.id_empresa=e.id_empresa 
