@@ -41,6 +41,7 @@
 		<script type="text/javascript" src="../../js/jquery.js"></script>
 		<script type="text/javascript" src="../../js/dynamic.js"></script>
 		<script type="text/javascript" src="../../js/hotel-db.js"></script>
+        <script type="text/javascript" src="../../js/user.js"></script>
 	</head>
 
     <!--Construcción de la vista-->
@@ -49,7 +50,7 @@
             /**
             * Incluye la implementación de la clase menu, archivo que crea el menú superior de la aplicación web
             */
-            include "../../objects/menu.php"; 
+            include "../../objects/menu2.php"; 
         ?>
         
         <script type="text/javascript">
@@ -62,7 +63,9 @@
         <!-- Bloque que contiene el formulario con los campos correspondientes para el proceso de registro de un cliente-->
 		<div class="content col-12">
 			<div class="wrap-main wrap-main-big col-10 wrap-10 padd">
-				<div class="content-header">
+				
+                <form onsubmit="saveUser(); return false;">
+                <div class="content-header">
                     <h2 class="title-form">REGISTRAR CLIENTE</h2>
                 </div>
 				<div class="row">
@@ -77,11 +80,12 @@
 				</div>
 				<div>
                     <!-- Botón que se encarga de enviar los datos ingresados en los campos del formulario para su posterior almacenamiento en la base de datos -->
-					<button class="btn btn-block btn-register" onclick="sendClient(0);">
+					<button class="btn btn-block btn-register">
 						<i class="fa fa-check"></i>
 						<span>Registrar cliente</span>
 					</button>
 				</div>
+                </form>
 			</div>
 		</div>
         
@@ -89,8 +93,8 @@
             /**
             * Incluye la implementación del archivo que contiene el footer con la información de la aplicación web
             */
-            include "../../objects/footer.php";
-            include "../../objects/alerts.php";
+            include "../../objects/footer2.php";
+            include "../../objects/alerts2.php";
         ?>
 
         <div id="add-prof" class="modal hideable" onclick="touchOutside(this);";>

@@ -57,7 +57,7 @@
             /**
             * Incluye la implementación de la clase menu, archivo que crea el menú superior de la aplicación web
             */
-            include "../../objects/menu.php"; 
+            include "../../objects/menu2.php"; 
         ?>
         
         <script type="text/javascript">
@@ -315,8 +315,8 @@
             /**
             * Incluye la implementación del archivo que contiene el footer con la información de la aplicación web
             */
-            include "../../objects/alerts.php"; 
-            include "../../objects/footer.php"; 
+            include "../../objects/alerts2.php"; 
+            include "../../objects/footer2.php"; 
         ?>
 
         <div id="confirm-delete" class="modal hideable" onclick="touchOutside(this);">
