@@ -50,17 +50,18 @@
             /**
             * Incluye la implementación de la clase menu, archivo que crea el menú superior de la aplicación web
             */
-            include "../../objects/menu.php"; 
-        ?>
+            include "../../objects/menu2.php"; 
+		?>
         
         <script type="text/javascript">
             /**
             * Implementa el método setCurrentPage() pasando como parámetro la cadena de texto "registrar"
             */
             setCurrentPage("registrar");
+
         </script>
         
-        <!--Contiene el formulario de registro correspondiente para una empresa-->
+        <!--Contiene el formulario de registro correspondiente para una RESERVA-->
 		<div class="content col-12 padd">
 			<div class="wrap-main wrap-main-big col-10 wrap-10 padd">
 				<div class="content-header">
@@ -274,8 +275,8 @@
             /**
             * Incluye la implementación del archivo que contiene el footer con la información de la aplicación web
             */
-            include "../../objects/footer.php";
-            include "../../objects/alerts.php"; 
+            include "../../objects/footer2.php";
+            include "../../objects/alerts2.php"; 
         ?>
 
         <div style="display: none;">
@@ -331,7 +332,7 @@
 			function getRoomQuantity(){
 				var start=document.getElementById('start-date').value;
 				var finish=document.getElementById('finish-date').value;
-
+				console.log("vine acá");
 				$.ajax({
 					type:'post',
 					url:'../../includes/get.php',

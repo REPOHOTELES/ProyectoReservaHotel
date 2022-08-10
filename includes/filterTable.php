@@ -191,8 +191,8 @@
                             <td>'.'$ '.number_format($current['total_factura'], 0, '.', '.').'</td>
                             <td>'.$current['fecha_factura'].'</td>
                             <td>'.$current['responsable'].'</td>
-                            <td><a href = "/facturas/registrar?id='.$current['id_reserva'].'&serie='.$current['serie_factura'].'"class="button-more-info" class="col-10">Ver Detalles</a></td>
-                            <td><a target = "_blank" href = "../reportes/facturas?id='.$current['id_reserva'].'&typeBill='.$current['tipo'].'&serie='.$current['serie_factura'].'" class="col-10"><img src="/res/img/pdf-icon.png" style="cursor:pointer;" width="60"/></a></td>
+                            <td><a href = "../facturas/registrar?id='.$current['id_reserva'].'&serie='.$current['serie_factura'].'"class="button-more-info" class="col-10">Ver Detalles</a></td>
+                            <td><a target = "_blank" href = "../reportes/facturas?id='.$current['id_reserva'].'&typeBill='.$current['tipo'].'&serie='.$current['serie_factura'].'" class="col-10"><img src="../res/img/pdf-icon.png" style="cursor:pointer;" width="60"/></a></td>
                         </tr>';
             }
             $output.="</tbody></table>";

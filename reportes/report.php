@@ -21,7 +21,7 @@
         function Header($title){
             // Logo
             $this->Image('../../res/img/logo.png',10,6,23);
-            $this->Image('../../res/img/title.png',37,9,44);
+            $this->Image('../../res/img/tittle.png',37,9,44);
             // Arial bold 18
             $this->SetFont('Arial','B',18);
             // Movernos a la derecha

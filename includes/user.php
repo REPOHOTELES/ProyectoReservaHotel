@@ -23,7 +23,7 @@ class User extends Person{
     }
     
     public function setId($id){
-        $query = $this->connect()->prepare('SELECT id_persona, nombres_persona, apellidos_persona, id_cargo, telefono_persona, numero_documento, nombre_usuario FROM personas 
+        $query = $this->connect()->prepare('SELECT id_persona, nombres_persona, apellidos_persona, id_cargo, telefono_persona,correo_persona, numero_documento, nombre_usuario FROM personas 
         WHERE id_persona = :id');
         $query->execute(['id' => $id]);
         
@@ -35,6 +35,7 @@ class User extends Person{
             $this->phone = $currentUser['telefono_persona'];
             $this->numberDocument = $currentUser['numero_documento'];
             $this->username = $currentUser['nombre_usuario'];
+            $this->email = $currentUser['correo_persona'];
         }
     }
 
@@ -57,6 +58,10 @@ class User extends Person{
       
     public function getName(){
         return $this->name;
+    }
+
+    public function getEmail(){
+        return $this->email;
     }
     
     public function getUserName(){

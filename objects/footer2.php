@@ -1,5 +1,5 @@
 <!--Contiene el bloque con el pie de página de la aplicación web-->
-<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../../css/footer.css">
 <style type="text/css">
 	.footer-control{
 		position: absolute;
@@ -51,7 +51,7 @@
 				<div class="col-4 padd">
 					<h4>Pruebas</h4>
 					<ul style="list-style: none;">
-						<li style="text-align: left;"><a style="color: white;" href="../reservas/registrar2"><i class="fa fa-exclamation-circle"></i> <strong> (Nuevo)</strong> Registrar reserva</a></li>
+						<li style="text-align: left;"><a style="color: white;" href="../../reservas/registrar2"><i class="fa fa-exclamation-circle"></i> <strong> (Nuevo)</strong> Registrar reserva</a></li>
 					</ul>
 				</div>
 			</div>

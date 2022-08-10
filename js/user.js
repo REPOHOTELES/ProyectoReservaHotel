@@ -55,7 +55,7 @@ function saveUser(){
             }else{
                 $.ajax({
                     type: 'post',
-                    url: '/includes/insert.php',
+                    url: '../../includes/insert.php',
                     data: "entity=saveUser&name="+name+"&lastName="+lastName+"&typeDocument="+typeDocument+"&numberDocument="+numberDocument+"&phone="+phone+"&role="+role+"&email="+email+"&userName="+userName+"&password="+password1,
                     success: function (ans) {
                         var data=ans.split(";");
@@ -110,7 +110,7 @@ function updateUser(){
             }else{
                 $.ajax({
                     type: 'post',
-                    url: '../includes/update.php',
+                    url: '../../includes/update.php',
                     data: "action=updateUser&name="+name+"&lastName="+lastName+"&typeDocument="+typeDocument+"&numberDocument="+numberDocument+"&phone="+phone+"&role="+role+"&email="+email+"&userName="+userName+"&password="+password1+"&id="+idUser,
                     success: function (ans) {
                         var data=ans.split(";");
@@ -127,14 +127,14 @@ function updateUser(){
 }
 
 function redirect(){
-    window.location = "../usuarios/";
+    window.location = "../../usuarios/";
 }
 
 
 function deleteUser(idUserInput){
     $.ajax({
         type: 'post',
-        url: '../includes/update.php',
+        url: '../../includes/update.php',
         data: "action=deleteUser&id="+idUserInput,
         success: function (ans) {
             var data=ans.split(";");

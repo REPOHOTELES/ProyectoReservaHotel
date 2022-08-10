@@ -387,8 +387,9 @@ function updateEnterprise(){
  			if(ans=="1")
 				href='../control_diario?date='+getDate(0);
  			else
+
  				href='../facturas/registrar?id='+reservation+'&co=1';
- 			modal.getElementsByTagName("button")[0].onclick=function(){location.href=href; if(ans=="1")confirmCheckOut(reservation); };
+ 			modal.getElementsByTagName("button")[0].onclick=function(){location.href=href; if(ans=="1"){confirmCheckOut(reservation);}else{confirmCheckOut(reservation);} };
  		});
 
  		showModal('confirm-check-out');

@@ -1,6 +1,6 @@
 <!--Contiene el bloque correspondiente a las alertas emitidas por el sistema luego de presentarse algún evento ya sea inesperado o controlado por el usuario-->
 
-<link rel="stylesheet" type="text/css" href="../css/alerts.css">
+<link rel="stylesheet" type="text/css" href="../../css/alerts.css">
 <div id="alerts" class="col-3">
 
     <div>
