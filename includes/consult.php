@@ -222,11 +222,12 @@
         * @param $finishDate Fecha de salida de huésped (es)
         */
         public function roomQuantityList($quantity,$startDate,$finishDate){
-            $query = $this->connect()->prepare('SELECT DISTINCT th.id_tipo_habitacion,th.nombre_tipo_habitacion
+            try {
+                $query = $this->connect()->prepare('SELECT DISTINCT th.id_tipo_habitacion,th.nombre_tipo_habitacion
                 FROM tipos_habitacion th 
                 INNER JOIN tarifas t ON t.id_tipo_habitacion=th.id_tipo_habitacion
                 INNER JOIN habitaciones h ON h.id_tipo_habitacion=th.id_tipo_habitacion
-                WHERE t.cantidad_huespedes=:quantity 
+                WHERE t.cantidad_huespedes=:quantity
                 AND h.numero_habitacion NOT IN (
                 SELECT numero_habitacion
                 FROM habitaciones h
@@ -238,14 +239,23 @@
                 OR (date_format(r.fecha_ingreso,"%X-%m-%d")<'.$startDate.' AND date_format(r.fecha_salida,"%X-%m-%d")>'.$finishDate.')
                 ) AND (r.estado_reserva="AC" OR r.estado_reserva="RE"))
                 ORDER BY th.id_tipo_habitacion');
+                
+            } catch (\Throwable $th) {
+                echo '<option value="0">'.$th.'</option>';
+            }
+
 
             $query->execute([':quantity'=>$quantity]);
+            foreach ($query as $current) {
+                echo '<option value="'.$current['id_tipo_habitacion'].'">'.$current['nombre_tipo_habitacion'].'</option>';
+            }
             
-
+/*
             echo '<option value="1">JOLIOT</option>';
             echo '<option value="2">HAWKING</option>';
             echo '<option value="3">LISPECTOR</option>';
             echo '<option value="4">MAKKAH</option>';
+            */
             return false;
         }
 
@@ -261,7 +271,7 @@
             foreach ($query as $current) {
                 echo '<option value="'.$current['id_tarifa'].'">'.$this->setFormatPrice($current['valor_ocupacion']).'</option>';
             }
-            echo "<option value='1'>50000</option>";
+            //echo "<option value='1'>50000</option>";
             return false;
         }
         
@@ -322,7 +332,7 @@
                 echo '<td>'.$current['id_reserva'].'</td>'.PHP_EOL;
                 echo '<td><button onclick="window.location.href='."'../reservas/editar?id=".$current['id_reserva']."'".'" class="btn btn-table btn-edit-hover '.($current['aux']==1?"btn-success":"btn-complete").'"><span>'.($current['aux']==1?"Listo":"Completar").'</span></button></td>'.PHP_EOL;
                 echo '<td><label class="switch switch-table"><input type="checkbox" onchange="setCheckOn('.$current['id_reserva'].',this);"'.($current['fecha_ingreso']==date("Y-m-d")&&$current['aux']==1?'':'disabled').'><span class="slider '.($current['fecha_ingreso']==date("Y-m-d")&&$current['aux']==1?'slider-red':'slider-gray').' round green"></span></label></td>';
-                echo '<td><a href="'.($current['id_titular']==""?'../empresas/detalles?id='.$current['id_empresa']:'/clientes/detalles?id='.$current['id_titular']).'">'.($current['id_titular']==""?$current['nombre_empresa']:$current['nombre_t']).'</a></td>';
+                echo '<td><a href="'.($current['id_titular']==""?'../empresas/detalles?id='.$current['id_empresa']:'../clientes/detalles?id='.$current['id_titular']).'">'.($current['id_titular']==""?$current['nombre_empresa']:$current['nombre_t']).'</a></td>';
                 echo '<td>'.($current['id_titular']==""?$current['telefono_empresa']:$current['telefono_persona']).'</td>'.PHP_EOL;
                 echo '<td>'.($current['fecha_ingreso']>=date("Y-m-d")?$current['fecha_ingreso']:"Vencido").'</td>'.PHP_EOL;
                 echo '<td>'.$current['dias'].'</td>'.PHP_EOL;
@@ -800,7 +810,7 @@
 
             foreach ($query as $current) {
                 echo '<tr><td>'.$current['numero_habitacion'].'</td>';
-               echo '<td><a href="'.$current['id_persona'].'">'.$current['nombre'].'</a></td>';
+               echo '<td><a href="../../clientes/detalles?id='.$current['id_persona'].'">'.$current['nombre'].'</a></td>';
             }
         }
 

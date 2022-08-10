@@ -55,7 +55,7 @@ function send(entity, extra){
 
 	var p= $.ajax({
 		type: 'post',
-		url: 'insert.php',
+		url: '../../includes/insert.php',
 		data: (entity!=null?entity.getSendData():"")+extra
 	});
 
@@ -65,7 +65,7 @@ function send(entity, extra){
 function sendUpdate(data){
 	var p= $.ajax({
 		type: 'post',
-		url: '../includes/update.php',//ojo, este toca dejarlo  ../../update.php, lo voy a cambiar para probar
+		url: 'update.php',
 		data: data
 	});
 
@@ -78,7 +78,7 @@ function sendUpdate2(entity, extra){
 
 	var p= $.ajax({
 		type: 'post',
-		url: '../../update.php', //ojo, este toca dejarlo  ../../update.php, lo voy a cambiar para probar
+		url: 'update.php',
 		data: (entity!=null?entity.getSendData():"")+extra
 	});
 
@@ -456,7 +456,7 @@ function sendProfession(){
 
 	$.ajax({
 		type: 'post',
-		url: 'insert.php',
+		url: '../../includes/insert.php',
 		data: "entity=profession&name="+card.getElementsByTagName("input")[0].value,
 		success: function (ans) {
 			var data=ans.split(";");

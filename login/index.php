@@ -76,10 +76,14 @@
     
     <!--Construcción de la vista-->
     <body>
+        
         <!--Contiene un formulario con la información mínima para ingresar al sistema-->
         <div class="aux-content col-12"></div>
+        
 	    <div class="content col-12">
+        
             <div class="wrap-log marco wrap-main col-5 wrap-5 ">
+                 <img src="../res/img/tittle.png" class="img-fluid">
                 <div class=" form-log">
                     <h2 class="title-form">INICIAR SESIÓN</h2>
                     <br>
@@ -110,6 +114,11 @@
             include "../objects/alerts.php"; 
             include "../objects/footer.php"; 
         ?>
-        
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
     </body>
 </html>

@@ -9,9 +9,9 @@ class Database{
     private $charset;
 
     public function __construct(){
-        $this->host = '';
-        $this->db   = 'hotel-app';
-        $this->user = '';
+        $this->host = 'localhost';
+        $this->db   = 'hotel-db2';
+        $this->user = 'root';
         $this->password = "";
         $this->charset  = 'utf8mb4';
     }
